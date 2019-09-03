@@ -3,6 +3,7 @@ layout: post
 title:  "[AtCoder Beginner Contest 139] 賽後解說"
 date:   2019-09-01 21:40:00 +0800
 categories: algorithm atcoder
+permalink: /atcoder-beginner-contest-139/
 comments: yes
 ---
 {% include facebook.html %}
