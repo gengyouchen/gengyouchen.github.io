@@ -24,8 +24,9 @@ description: >- # this means to ignore newlines until "baseurl:"
   這個 blog 會記錄我的日常, 包含了演算法解題/學習心得, 一些 Linux Kernel 開發經驗談, 還有日本旅遊/日語學習/動畫等的心得分享.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://gengyouchen.github.io
-#twitter_username: gengyouchen
+facebook_username: gengyouchen
 github_username: gengyouchen
+linkedin_username: gengyouchen
 
 # Build settings
 theme: minima
