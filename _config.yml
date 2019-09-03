@@ -8,7 +8,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you: 
+# If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -22,10 +22,9 @@ title: "小廢物佑佑的碼農生活"
 email: "gengyouchen@gmail.com"
 description: "這個 blog 會記錄我的日常, 包含了演算法解題/學習心得, 一些 Linux Kernel 開發經驗談, 還有日本旅遊/日語學習/動畫等的心得分享"
 baseurl: "" # the subpath of your site, e.g. /blog
-url: https://gengyouchen.github.io
-facebook_username: gengyouchen
-github_username: gengyouchen
-linkedin_username: gengyouchen
+url: "https://gengyouchen.github.io"
+github_username: "gengyouchen"
+linkedin_username: "gengyouchen"
 
 # Build settings
 theme: minima
