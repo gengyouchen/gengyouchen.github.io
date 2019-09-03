@@ -9,18 +9,18 @@ comments: yes
 {% include facebook.html %}
 
 先說明我不是 ACMer, 大學也不是念資工系, 這篇文比較適合出社會後才開始學習演算法的小夥伴們.
-希望能幫助到更多跟我一樣平庸的人, 在工作之餘多讀書/多刷題提高自己的演算法水平. 
+希望能幫助到更多跟我一樣平庸的人, 在工作之餘多讀書/多刷題提高自己的演算法水平.
 
 這週的 Beginner Contest 前三題基本都是給大家簽到的性質, 沒空的小夥伴可以從第四題開始寫.
 
-| Problem                                                                              | Topics                                                                 | Difficulty |
-| ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------- | ---------- |
-| [A - Tenki(天氣)](https://atcoder.jp/contests/abc139/tasks/abc139_a?lang=en)         | `String`                                                               | Easy       |
-| [B - Power Socket (插座)](https://atcoder.jp/contests/abc139/tasks/abc139_b?lang=en) | `Math`                                                                 | Easy       |
-| [C - Lower (低處)](https://atcoder.jp/contests/abc139/tasks/abc139_c?lang=en)        | `Array` `Two Pointers`                                                 | Easy       |
-| [D - ModSum (餘數之合)](https://atcoder.jp/contests/abc139/tasks/abc139_d?lang=en)   | `Math`                                                                 | Easy       |
-| [E - League (聯賽)](https://atcoder.jp/contests/abc139/tasks/abc139_e?lang=en)       | `Breadth-first Search` `Depth-first Search` `Graph` `Topological Sort` | Medium     |
-| [F - Engines (引擎)](https://atcoder.jp/contests/abc139/tasks/abc139_f?lang=en)      | `Geometry` `Sliding Window` `Sort` `Two Pointers`                      | Medium     |
+| Problem                                           | Topics                                                                 | Difficulty |
+| ------------------------------------------------- | ---------------------------------------------------------------------- | ---------- |
+| [A - Tenki (天氣)](#a---tenki-天氣)               | `String`                                                               | Easy       |
+| [B - Power Socket (插座)](#b---power-socket-插座) | `Math`                                                                 | Easy       |
+| [C - Lower (低處)](#c---lower-低處)               | `Array` `Two Pointers`                                                 | Easy       |
+| [D - ModSum (餘數之合)](#d---modsum-餘數之合)     | `Math`                                                                 | Easy       |
+| [E - League (聯賽)](#e---league-聯賽)             | `Breadth-first Search` `Depth-first Search` `Graph` `Topological Sort` | Medium     |
+| [F - Engines (引擎)](#f---engines-引擎)           | `Geometry` `Sliding Window` `Sort` `Two Pointers`                      | Medium     |
 
 這週還蠻歡樂向的, 對照 LeetCode 的難度, 大概是 Easy ~ Medium, 沒有什麼噁心的題目.
 
@@ -240,7 +240,7 @@ F - Engines (引擎)
 所以我們把長度為 `n` 個陣列按照每個向量的角度排好序, 答案就會是其中某個子區間 `[L, R]` 內的所有向量之合 (這些向量的角度差距不會超過 180 度), 而這就是一滑動窗口的問題.
 * 注意: 子區間 `[L, R]` 可以跨過 360 度 (`R >= n`), 只要 `R < L + n` 就是合法的.
 
-滑動窗口只需要 `O(n)` 時間就能求解, 但由於先前排序就花了 `O(n*log(n))` 的時間, 所以這題的時間複雜度還是 `O(n*log(n))`, 而空間複雜度則是 `O(1)` (因為我們用堆積排序, 不需要額外的輔助空間) 
+滑動窗口只需要 `O(n)` 時間就能求解, 但由於先前排序就花了 `O(n*log(n))` 的時間, 所以這題的時間複雜度還是 `O(n*log(n))`, 而空間複雜度則是 `O(1)` (因為我們用堆積排序, 不需要額外的輔助空間)
 
 ```cpp
 using LL = long long;
