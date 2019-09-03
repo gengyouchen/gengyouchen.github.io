@@ -3,7 +3,9 @@ layout: post
 title:  "[AtCoder Beginner Contest 139] 賽後解說"
 date:   2019-09-01 21:40:00 +0800
 categories: algorithm atcoder
+comments: yes
 ---
+{% include facebook.html %}
 
 先說明我不是 ACMer, 大學也不是念資工系, 這篇文比較適合出社會後才開始學習演算法的小夥伴們.
 希望能幫助到更多跟我一樣平庸的人, 在工作之餘多讀書/多刷題提高自己的演算法水平. 
@@ -278,3 +280,7 @@ public:
 ```
 
 完整程式碼: [sliding-window-solution.cpp](https://github.com/gengyouchen/atcoder/blob/master/beginner-contest-139/f-engines/sliding-window-solution.cpp)
+
+{% if page.comments %}
+<div class="fb-comments" data-href="{{ site.url }}{{ page.url }}" data-width="100%" data-numposts="5"></div>
+{% endif %}
