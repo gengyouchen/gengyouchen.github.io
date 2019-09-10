@@ -227,7 +227,7 @@ public:
 	/* time: O((R - L) * log(log(R))), space: O(R - L) */
 	int count(int L, int R) {
 		const int R4 = R / 4, L4 = L / 4;
-		vector<bool> sieve(R - L + 1, true), sieve4(R4 - L4 + 1, true);
+		vector<bool> sieve(R - L + 1, true), sieve4(R4 - L4 + 1, true); /* for convenience, treat 1 as prime */
 		for (int i : primes) {
 			for (int j = jumpToStart(i * i, L, i); j <= R; j += i)
 				sieve[j - L] = false;
