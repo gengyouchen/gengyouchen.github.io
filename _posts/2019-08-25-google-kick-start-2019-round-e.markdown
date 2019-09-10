@@ -170,7 +170,7 @@ Street Checkers (街頭跳棋)
 * [LeetCode 204 - Count Primes](https://leetcode.com/problems/count-primes/description/)
 * [LeetCode 1175 - Prime Arrangements](https://leetcode.com/problems/prime-arrangements/description/)
 
-題目經過包裝, 需要一點數學分析才能發現跟質數有關, 然後套用 [Sieve of Eratosthenes](https://cp-algorithms.com/algebra/sieve-of-eratosthenes.html) 求解.
+題目經過包裝, 需要一點數學分析才能發現跟質數有關, 然後套用 [Sieve of Eratosthenes](https://cp-algorithms.com/algebra/sieve-of-eratosthenes.html) 求解.
 
 遊戲規則是: 每場遊戲對應一個正整數 `i`, Alice 的得分是 `i` 的奇數因數的個數, 而 Blob 的得分是 `i` 的偶數因數的個數, 當 Alice 和 Blob 的得分相差不超過 `2`, 我們說這場遊戲很有趣.
 
