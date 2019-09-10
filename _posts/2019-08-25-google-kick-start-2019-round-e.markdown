@@ -170,11 +170,27 @@ Street Checkers (街頭跳棋)
 * [LeetCode 204 - Count Primes](https://leetcode.com/problems/count-primes/description/)
 * [LeetCode 1175 - Prime Arrangements](https://leetcode.com/problems/prime-arrangements/description/)
 
-只是題目經過包裝, 需要一點分析才能意識到跟質數有關, 然後套用 [Sieve of Eratosthenes](https://cp-algorithms.com/algebra/sieve-of-eratosthenes.html) 求解.
+題目經過包裝, 需要一點數學分析才能發現跟質數有關, 然後套用 [Sieve of Eratosthenes](https://cp-algorithms.com/algebra/sieve-of-eratosthenes.html) 求解.
 
+遊戲規則是: 每場遊戲對應一個正整數 `i`, Alice 的得分是 `i` 的奇數因數的個數, 而 Blob 的得分是 `i` 的偶數因數的個數, 當 Alice 和 Blob 的得分相差不超過 `2`, 我們說這場遊戲很有趣.
 
+題目現在問你, 給你 `i` 的區間是 `[L, R]`, 問你其中有幾場遊戲是有趣的?
 
+要計算 `i` 的因數個數, 我們能想到的就是做質因數分解: `i = 2^x * 3^y * 5^z * 7^w * ...`
+* `i` 的奇數因數的個數 (Alice) 是: `(y+1) * (z+1) * (w+1) * ...`
+* `i` 的偶數因數的個數 (Blob) 是: `x * (y+1) * (z+1) * (w+1) * ...`
 
+所以當 `i` 是個有趣的遊戲, 只有下面四種狀況:
+1. `x == 0`, 而且 `3^y * 5^z * 7^w * ...` 是質數或 `1`
+2. `x == 1`
+3. `x == 2`, 而且 `3^y * 5^z * 7^w * ...` 是質數或 `1`
+4. `x == 3`, 而且 `3^y * 5^z * 7^w * ...` 是 `1`
+
+所以針對 case 1 和 case 3, 我們需要知道 `[L, R]` 和 `[L/4, R/4]` 這兩個範圍內哪些是質數.
+
+由於 `R` 可能很大, 沒辦法直接保存這麼大的質數表, 必須用 [Block sieving](https://cp-algorithms.com/algebra/sieve-of-eratosthenes.html#toc-tgt-6) 的技巧:
+* 針對所有筆測資中最大的 `R`, 我們預先計算一張 `1 ~ sqrt(R)` 的質數表 `primes`, 所需的時間是 `O(sqrt(R) * log(log(sqrt(R)))) = O(sqrt(R) * log(log(R)))`.
+* 針對每一筆 `[L, R]` 測資, 利用 `primes`, 我們只建立 `L ~ R` 和 `L/4 ~ R/4` 的質數表, 所需的時間是 `O(R*log(log(R)) - L*log(log(L))) = O((R - L) * log(log(R))`.
 
 ```cpp
 class StreetCheckers {
